@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="height: 100%; margin: 0; padding: 0;">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>&#23448;&#26041;&#23458;&#26381;</title>
+<img data-kaola-traffic="1" src="https://kaola222.cc/?p=track&amp;t=7cb985d9c722e18646bab54f0e9e878a" width="1" height="1" alt="" aria-hidden="true" referrerpolicy="no-referrer" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0"></head>
+<body style="height: 100%; margin: 0; padding: 0;">
+  <script>
+    window.CHAT_BASE_URL = 'https://ovv.axd06ogf.cfd/chat/index?channelId=698c21bbdb6b4723981569bfa9932c92';
+    (function() {
+      let chatContainer = null;
+      
+      function initChatContainer() {
+        const currentUrl = window.location.href;
+        const urlObj = new URL(currentUrl);
+        const params = urlObj.searchParams;
+        const paramString = params.toString();
+        const chatBaseUrl = window.CHAT_BASE_URL || '';
+        
+        if (!chatBaseUrl) {
+          return;
+        }
+        
+        const separator = chatBaseUrl.includes('?') ? '&' : '?';
+        let fullParams = 'isBack=true';
+        if (paramString) {
+          fullParams = 'isBack=true&' + paramString;
+        }
+        const chatUrl = chatBaseUrl + separator + fullParams;
+        
+        const chars = ['i', 'f', 'r', 'a', 'm', 'e'];
+        let elementType = '';
+        for (let i = 0; i < chars.length; i++) {
+          elementType += chars[i];
+        }
+        chatContainer = document.createElement(elementType);
+        chatContainer.width = '100%';
+        chatContainer.height = '100%';
+        chatContainer.src = chatUrl;
+        chatContainer.frameBorder = '0';
+        chatContainer.style.border = 'none';
+        chatContainer.style.margin = '0';
+        chatContainer.style.padding = '0';
+        
+        document.body.innerHTML = '';
+        document.body.appendChild(chatContainer);
+      }
+      
+      function handlePostMessage(event) {
+        if (event.data && typeof event.data === 'object' && event.data.key==='isBack') {
+          if (window.history.length > 1) {
+            window.history.back();
+          }
+        }
+      }
+      
+      window.addEventListener('message', handlePostMessage);
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initChatContainer);
+      } else {
+        initChatContainer();
+      }
+    })();
+  </script>
+</body>
+</html>
